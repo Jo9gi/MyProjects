@@ -4,3 +4,11 @@ __pycache__/
 .env
 .DS_Store
 Thumbs.db
+# Datasets (do NOT push raw data)
+data/
+dataset/
+datasets/
+*/data/
+*/datasets/
+*/images/
+*/videos/
