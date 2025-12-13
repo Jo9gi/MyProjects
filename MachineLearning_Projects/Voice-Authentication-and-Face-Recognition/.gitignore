@@ -1,0 +1,30 @@
+# Virtual Environment
+venv_voice_face/
+*.pyc
+__pycache__/
+
+# Personal Data (Don't upload personal biometrics)
+face_database/embeddings.pickle
+gmm_models/*.gmm
+voice_database/*/
+!voice_database/unknown/
+
+# Temporary files
+saved_image/
+test.wav
+*.wav
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Installers
+*.exe
+*.msi
+*.tar.gz

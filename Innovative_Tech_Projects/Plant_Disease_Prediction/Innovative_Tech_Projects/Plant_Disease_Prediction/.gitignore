@@ -1,0 +1,36 @@
+# Virtual environments
+venv/
+env/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Dataset files (too large for GitHub)
+Plant_Disease_Dataset/
+Plant_Disease_Dataset(v)/
+*.zip
+
+# Model files (large files)
+*.h5
+*.keras
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

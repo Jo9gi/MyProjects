@@ -1,0 +1,13 @@
+# Ignore virtual environments
+jogi/
+venv/
+__pycache__/
+*.pyc
+
+# Ignore dataset and model weights
+# datasets/
+# *.pt
+# *.weights
+
+# VS Code settings
+.vscode/
