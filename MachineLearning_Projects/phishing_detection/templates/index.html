@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing URL Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 420px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 12px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .legit {
+            background: #d4edda;
+            color: #155724;
+        }
+        .phish {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Phishing URL Detector</h2>
+        <form method="POST">
+            <input type="text" name="url" placeholder="Enter URL" required>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if result %}
+            <div class="result {{ 'phish' if result.prediction == 'Phishing' else 'legit' }}">
+                <strong>{{ result.prediction }}</strong><br>
+                Confidence: {{ result.confidence }}%
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
